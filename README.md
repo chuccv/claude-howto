@@ -17,6 +17,8 @@
 
 # Master Claude Code in a Weekend
 
+> **🤖 Antigravity Setup Ready**: This repository's Slash Commands have been migrated directly to `.agents/workflows/` so Antigravity can understand and run them seamlessly. You can also run `./scripts/install-antigravity-skills.sh` to install all skills globally for Antigravity usage. Give it a try!
+
 Go from typing `claude` to orchestrating agents, hooks, skills, and MCP servers — with visual tutorials, copy-paste templates, and a guided learning path.
 
 **[Get Started in 15 Minutes](#get-started-in-15-minutes)** | **[Find Your Level](#not-sure-where-to-start)** | **[Browse the Feature Catalog](CATALOG.md)**

@@ -5,6 +5,8 @@
 
 # Agent Skills Guide
 
+> **Antigravity Compatibility**: All skills located here are largely compatible with Antigravity AI! To make them available to your Antigravity agent, you can run `scripts/install-antigravity-skills.sh` which will import them into `~/.gemini/antigravity/skills/`.
+
 Agent Skills are reusable, filesystem-based capabilities that extend Claude's functionality. They package domain-specific expertise, workflows, and best practices into discoverable components that Claude automatically uses when relevant.
 
 ## Overview
