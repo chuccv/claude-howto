@@ -15,341 +15,341 @@
 [![Version](https://img.shields.io/badge/version-2.1.112-brightgreen)](CHANGELOG.md)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-2.1+-purple)](https://code.claude.com)
 
-🌐 **Language / Ngôn ngữ / 语言 / Мова:** [English](README.md) | [Tiếng Việt](vi/README.md) | [中文](zh/README.md) | [Українська](uk/README.md)
+🌐 **Ngôn ngữ / Language / 语言 / Мова:** [Tiếng Việt](README.md) | [English](en/README.md) | [中文](zh/README.md) | [Українська](uk/README.md)
 
-# Master Claude Code in a Weekend
+# Thành thạo Claude Code trong một cuối tuần
 
-> **🤖 Antigravity Setup Ready**: This repository's Slash Commands have been migrated directly to `.agents/workflows/` so Antigravity can understand and run them seamlessly. You can also run `./scripts/install-antigravity-skills.sh` to install all skills globally for Antigravity usage. Give it a try!
+> **🤖 Sẵn sàng cho Antigravity**: Các Slash Command trong repo này đã được chuyển sang `.agents/workflows/` để Antigravity có thể hiểu và chạy trực tiếp. Bạn cũng có thể chạy `./scripts/install-antigravity-skills.sh` để cài tất cả skill toàn cục cho Antigravity. Hãy thử ngay!
 
-Go from typing `claude` to orchestrating agents, hooks, skills, and MCP servers — with visual tutorials, copy-paste templates, and a guided learning path.
+Từ việc gõ `claude` đến điều phối agent, hook, skill và MCP server — với hướng dẫn trực quan, template sẵn sàng copy-paste và lộ trình học có hướng dẫn.
 
-**[Get Started in 15 Minutes](#get-started-in-15-minutes)** | **[Find Your Level](#not-sure-where-to-start)** | **[Browse the Feature Catalog](CATALOG.md)**
-
----
-
-## Table of Contents
-
-- [The Problem](#the-problem)
-- [How Claude How To Fixes This](#how-claude-how-to-fixes-this)
-- [How It Works](#how-it-works)
-- [Not Sure Where to Start?](#not-sure-where-to-start)
-- [Get Started in 15 Minutes](#get-started-in-15-minutes)
-- [What Can You Build With This?](#what-can-you-build-with-this)
-- [FAQ](#faq)
-- [Contributing](#contributing)
-- [License](#license)
+**[Bắt đầu trong 15 phút](#bắt-đầu-trong-15-phút)** | **[Tìm trình độ của bạn](#chưa-biết-bắt-đầu-từ-đâu)** | **[Duyệt danh mục tính năng](CATALOG.md)**
 
 ---
 
-## The Problem
+## Mục lục
 
-You installed Claude Code. You ran a few prompts. Now what?
-
-- **The official docs describe features — but don't show you how to combine them.** You know slash commands exist, but not how to chain them with hooks, memory, and subagents into a workflow that actually saves hours.
-- **There's no clear learning path.** Should you learn MCP before hooks? Skills before subagents? You end up skimming everything and mastering nothing.
-- **Examples are too basic.** A "hello world" slash command doesn't help you build a production code review pipeline that uses memory, delegates to specialized agents, and runs security scans automatically.
-
-You're leaving 90% of Claude Code's power on the table — and you don't know what you don't know.
+- [Vấn đề](#vấn-đề)
+- [Claude How To giải quyết như thế nào](#claude-how-to-giải-quyết-như-thế-nào)
+- [Cách hoạt động](#cách-hoạt-động)
+- [Chưa biết bắt đầu từ đâu?](#chưa-biết-bắt-đầu-từ-đâu)
+- [Bắt đầu trong 15 phút](#bắt-đầu-trong-15-phút)
+- [Bạn có thể xây dựng gì?](#bạn-có-thể-xây-dựng-gì)
+- [Câu hỏi thường gặp](#câu-hỏi-thường-gặp)
+- [Đóng góp](#đóng-góp)
+- [Giấy phép](#giấy-phép)
 
 ---
 
-## How Claude How To Fixes This
+## Vấn đề
 
-This isn't another feature reference. It's a **structured, visual, example-driven guide** that teaches you to use every Claude Code feature with real-world templates you can copy into your project today.
+Bạn đã cài Claude Code. Bạn đã chạy vài prompt. Giờ sao?
 
-| | Official Docs | This Guide |
+- **Tài liệu chính thức mô tả tính năng — nhưng không hướng dẫn cách kết hợp chúng.** Bạn biết slash command tồn tại, nhưng không biết cách kết hợp chúng với hook, memory và subagent thành workflow thực sự tiết kiệm hàng giờ.
+- **Không có lộ trình học rõ ràng.** Nên học MCP trước hook? Skill trước subagent? Cuối cùng bạn lướt qua tất cả và không thành thạo gì cả.
+- **Ví dụ quá cơ bản.** Một slash command "hello world" không giúp bạn xây dựng pipeline review code production sử dụng memory, phân công cho agent chuyên biệt và tự động chạy quét bảo mật.
+
+Bạn đang bỏ phí 90% sức mạnh của Claude Code — và bạn không biết mình không biết gì.
+
+---
+
+## Claude How To giải quyết như thế nào
+
+Đây không phải tài liệu tham khảo tính năng. Đây là **hướng dẫn có cấu trúc, trực quan, dựa trên ví dụ thực tế** giúp bạn sử dụng mọi tính năng Claude Code với template thực tế có thể copy vào dự án ngay hôm nay.
+
+| | Tài liệu chính thức | Hướng dẫn này |
 |--|---------------|------------|
-| **Format** | Reference documentation | Visual tutorials with Mermaid diagrams |
-| **Depth** | Feature descriptions | How it works under the hood |
-| **Examples** | Basic snippets | Production-ready templates you use immediately |
-| **Structure** | Feature-organized | Progressive learning path (beginner to advanced) |
-| **Onboarding** | Self-directed | Guided roadmap with time estimates |
-| **Self-Assessment** | None | Interactive quizzes to find your gaps and build a personalized path |
+| **Định dạng** | Tài liệu tham khảo | Hướng dẫn trực quan với sơ đồ Mermaid |
+| **Độ sâu** | Mô tả tính năng | Cách hoạt động bên trong |
+| **Ví dụ** | Đoạn code cơ bản | Template production-ready dùng ngay |
+| **Cấu trúc** | Tổ chức theo tính năng | Lộ trình học từ cơ bản đến nâng cao |
+| **Onboarding** | Tự tìm hiểu | Lộ trình có hướng dẫn với ước tính thời gian |
+| **Tự đánh giá** | Không có | Quiz tương tác để tìm lỗ hổng và xây dựng lộ trình cá nhân |
 
-### What you get:
+### Bạn nhận được gì:
 
-- **10 tutorial modules** covering every Claude Code feature — from slash commands to custom agent teams
-- **Copy-paste configs** — slash commands, CLAUDE.md templates, hook scripts, MCP configs, subagent definitions, and full plugin bundles
-- **Mermaid diagrams** showing how each feature works internally, so you understand *why*, not just *how*
-- **A guided learning path** that takes you from beginner to power user in 11-13 hours
-- **Built-in self-assessment** — run `/self-assessment` or `/lesson-quiz hooks` directly in Claude Code to identify gaps
+- **10 module hướng dẫn** bao phủ mọi tính năng Claude Code — từ slash command đến custom agent team
+- **Config sẵn sàng copy-paste** — slash command, template CLAUDE.md, hook script, MCP config, subagent definition và plugin bundle đầy đủ
+- **Sơ đồ Mermaid** cho thấy cách mỗi tính năng hoạt động bên trong, giúp bạn hiểu *tại sao*, không chỉ *cách*
+- **Lộ trình học có hướng dẫn** đưa bạn từ người mới đến power user trong 11-13 giờ
+- **Tự đánh giá tích hợp** — chạy `/self-assessment` hoặc `/lesson-quiz hooks` trực tiếp trong Claude Code để xác định lỗ hổng
 
-**[Start the Learning Path  ->](LEARNING-ROADMAP.md)**
-
----
-
-## How It Works
-
-### 1. Find your level
-
-Take the [self-assessment quiz](LEARNING-ROADMAP.md#-find-your-level) or run `/self-assessment` in Claude Code. Get a personalized roadmap based on what you already know.
-
-### 2. Follow the guided path
-
-Work through 10 modules in order — each builds on the last. Copy templates directly into your project as you learn.
-
-### 3. Combine features into workflows
-
-The real power is in combining features. Learn to wire slash commands + memory + subagents + hooks into automated pipelines that handle code reviews, deployments, and documentation generation.
-
-### 4. Test your understanding
-
-Run `/lesson-quiz [topic]` after each module. The quiz pinpoints what you missed so you can fill gaps fast.
-
-**[Get Started in 15 Minutes](#get-started-in-15-minutes)**
+**[Bắt đầu lộ trình học ->](LEARNING-ROADMAP.md)**
 
 ---
 
-## Trusted by 21,800+ Developers
+## Cách hoạt động
 
-- **21,800+ GitHub stars** from developers who use Claude Code daily
-- **2,585+ forks** — teams adapting this guide for their own workflows
-- **Actively maintained** — synced with every Claude Code release (latest: v2.1.112, April 2026)
-- **Community-driven** — contributions from developers who share their real-world configurations
+### 1. Tìm trình độ của bạn
+
+Làm [bài quiz tự đánh giá](LEARNING-ROADMAP.md#-find-your-level) hoặc chạy `/self-assessment` trong Claude Code. Nhận lộ trình cá nhân dựa trên những gì bạn đã biết.
+
+### 2. Theo lộ trình hướng dẫn
+
+Học qua 10 module theo thứ tự — mỗi module xây dựng trên module trước. Copy template trực tiếp vào dự án khi bạn học.
+
+### 3. Kết hợp tính năng thành workflow
+
+Sức mạnh thực sự nằm ở việc kết hợp tính năng. Học cách nối slash command + memory + subagent + hook thành pipeline tự động xử lý code review, deployment và tạo tài liệu.
+
+### 4. Kiểm tra hiểu biết
+
+Chạy `/lesson-quiz [topic]` sau mỗi module. Quiz chỉ ra chính xác những gì bạn bỏ lỡ để bạn lấp lỗ hổng nhanh chóng.
+
+**[Bắt đầu trong 15 phút](#bắt-đầu-trong-15-phút)**
+
+---
+
+## Được tin dùng bởi 21,800+ lập trình viên
+
+- **21,800+ GitHub star** từ lập trình viên sử dụng Claude Code hàng ngày
+- **2,585+ fork** — các team điều chỉnh hướng dẫn này cho workflow riêng
+- **Được duy trì tích cực** — đồng bộ với mọi bản phát hành Claude Code (mới nhất: v2.1.112, tháng 4/2026)
+- **Cộng đồng đóng góp** — đóng góp từ lập trình viên chia sẻ cấu hình thực tế
 
 [![Star History Chart](https://api.star-history.com/svg?repos=luongnv89/claude-howto&type=Date)](https://star-history.com/#luongnv89/claude-howto&Date)
 
 ---
 
-## Not Sure Where to Start?
+## Chưa biết bắt đầu từ đâu?
 
-Take the self-assessment or pick your level:
+Làm bài tự đánh giá hoặc chọn trình độ:
 
-| Level | You can... | Start here | Time |
+| Trình độ | Bạn có thể... | Bắt đầu tại | Thời gian |
 |-------|-----------|------------|------|
-| **Beginner** | Start Claude Code and chat | [Slash Commands](01-slash-commands/) | ~2.5 hours |
-| **Intermediate** | Use CLAUDE.md and custom commands | [Skills](03-skills/) | ~3.5 hours |
-| **Advanced** | Configure MCP servers and hooks | [Advanced Features](09-advanced-features/) | ~5 hours |
+| **Cơ bản** | Khởi động Claude Code và chat | [Slash Command](01-slash-commands/) | ~2.5 giờ |
+| **Trung cấp** | Sử dụng CLAUDE.md và custom command | [Skill](03-skills/) | ~3.5 giờ |
+| **Nâng cao** | Cấu hình MCP server và hook | [Tính năng nâng cao](09-advanced-features/) | ~5 giờ |
 
-**Full learning path with all 10 modules:**
+**Lộ trình học đầy đủ với tất cả 10 module:**
 
-| Order | Module | Level | Time |
+| Thứ tự | Module | Trình độ | Thời gian |
 |-------|--------|-------|------|
-| 1 | [Slash Commands](01-slash-commands/) | Beginner | 30 min |
-| 2 | [Memory](02-memory/) | Beginner+ | 45 min |
-| 3 | [Checkpoints](08-checkpoints/) | Intermediate | 45 min |
-| 4 | [CLI Basics](10-cli/) | Beginner+ | 30 min |
-| 5 | [Skills](03-skills/) | Intermediate | 1 hour |
-| 6 | [Hooks](06-hooks/) | Intermediate | 1 hour |
-| 7 | [MCP](05-mcp/) | Intermediate+ | 1 hour |
-| 8 | [Subagents](04-subagents/) | Intermediate+ | 1.5 hours |
-| 9 | [Advanced Features](09-advanced-features/) | Advanced | 2-3 hours |
-| 10 | [Plugins](07-plugins/) | Advanced | 2 hours |
+| 1 | [Slash Command](01-slash-commands/) | Cơ bản | 30 phút |
+| 2 | [Memory](02-memory/) | Cơ bản+ | 45 phút |
+| 3 | [Checkpoint](08-checkpoints/) | Trung cấp | 45 phút |
+| 4 | [CLI cơ bản](10-cli/) | Cơ bản+ | 30 phút |
+| 5 | [Skill](03-skills/) | Trung cấp | 1 giờ |
+| 6 | [Hook](06-hooks/) | Trung cấp | 1 giờ |
+| 7 | [MCP](05-mcp/) | Trung cấp+ | 1 giờ |
+| 8 | [Subagent](04-subagents/) | Trung cấp+ | 1.5 giờ |
+| 9 | [Tính năng nâng cao](09-advanced-features/) | Nâng cao | 2-3 giờ |
+| 10 | [Plugin](07-plugins/) | Nâng cao | 2 giờ |
 
-**[Complete Learning Roadmap ->](LEARNING-ROADMAP.md)**
+**[Lộ trình học đầy đủ ->](LEARNING-ROADMAP.md)**
 
 ---
 
-## Get Started in 15 Minutes
+## Bắt đầu trong 15 phút
 
 ```bash
-# 1. Clone the guide
+# 1. Clone hướng dẫn
 git clone https://github.com/luongnv89/claude-howto.git
 cd claude-howto
 
-# 2. Copy your first slash command
+# 2. Copy slash command đầu tiên
 mkdir -p /path/to/your-project/.claude/commands
 cp 01-slash-commands/optimize.md /path/to/your-project/.claude/commands/
 
-# 3. Try it — in Claude Code, type:
+# 3. Thử ngay — trong Claude Code, gõ:
 # /optimize
 
-# 4. Ready for more? Set up project memory:
+# 4. Muốn thêm? Thiết lập project memory:
 cp 02-memory/project-CLAUDE.md /path/to/your-project/CLAUDE.md
 
-# 5. Install a skill:
+# 5. Cài một skill:
 cp -r 03-skills/code-review ~/.claude/skills/
 ```
 
-Want the full setup? Here's the **1-hour essential setup**:
+Muốn thiết lập đầy đủ? Đây là **thiết lập thiết yếu 1 giờ**:
 
 ```bash
-# Slash commands (15 min)
+# Slash command (15 phút)
 cp 01-slash-commands/*.md .claude/commands/
 
-# Project memory (15 min)
+# Project memory (15 phút)
 cp 02-memory/project-CLAUDE.md ./CLAUDE.md
 
-# Install a skill (15 min)
+# Cài skill (15 phút)
 cp -r 03-skills/code-review ~/.claude/skills/
 
-# Weekend goal: add hooks, subagents, MCP, and plugins
-# Follow the learning path for guided setup
+# Mục tiêu cuối tuần: thêm hook, subagent, MCP và plugin
+# Theo lộ trình học để thiết lập có hướng dẫn
 ```
 
-**[View the Full Installation Reference](#get-started-in-15-minutes)**
+**[Xem hướng dẫn cài đặt đầy đủ](#bắt-đầu-trong-15-phút)**
 
 ---
 
-## What Can You Build With This?
+## Bạn có thể xây dựng gì?
 
-| Use Case | Features You'll Combine |
+| Trường hợp sử dụng | Tính năng kết hợp |
 |----------|------------------------|
-| **Automated Code Review** | Slash Commands + Subagents + Memory + MCP |
-| **Team Onboarding** | Memory + Slash Commands + Plugins |
-| **CI/CD Automation** | CLI Reference + Hooks + Background Tasks |
-| **Documentation Generation** | Skills + Subagents + Plugins |
-| **Security Audits** | Subagents + Skills + Hooks (read-only mode) |
-| **DevOps Pipelines** | Plugins + MCP + Hooks + Background Tasks |
-| **Complex Refactoring** | Checkpoints + Planning Mode + Hooks |
+| **Review code tự động** | Slash Command + Subagent + Memory + MCP |
+| **Onboarding team** | Memory + Slash Command + Plugin |
+| **Tự động CI/CD** | CLI Reference + Hook + Background Task |
+| **Tạo tài liệu** | Skill + Subagent + Plugin |
+| **Kiểm toán bảo mật** | Subagent + Skill + Hook (chế độ chỉ đọc) |
+| **Pipeline DevOps** | Plugin + MCP + Hook + Background Task |
+| **Refactoring phức tạp** | Checkpoint + Planning Mode + Hook |
 
 ---
 
-## FAQ
+## Câu hỏi thường gặp
 
-**Is this free?**
-Yes. MIT licensed, free forever. Use it in personal projects, at work, in your team — no restrictions beyond including the license notice.
+**Có miễn phí không?**
+Có. Giấy phép MIT, miễn phí mãi mãi. Dùng trong dự án cá nhân, tại công ty, trong team — không có hạn chế nào ngoài việc giữ lại thông báo giấy phép.
 
-**Is this maintained?**
-Actively. The guide is synced with every Claude Code release. Current version: v2.1.112 (April 2026), compatible with Claude Code 2.1+.
+**Có được duy trì không?**
+Tích cực. Hướng dẫn được đồng bộ với mọi bản phát hành Claude Code. Phiên bản hiện tại: v2.1.112 (tháng 4/2026), tương thích với Claude Code 2.1+.
 
-**How is this different from the official docs?**
-The official docs are a feature reference. This guide is a tutorial with diagrams, production-ready templates, and a progressive learning path. They complement each other — start here to learn, reference the docs when you need specifics.
+**Khác gì tài liệu chính thức?**
+Tài liệu chính thức là tham khảo tính năng. Hướng dẫn này là tutorial với sơ đồ, template production-ready và lộ trình học tiến bộ. Chúng bổ sung cho nhau — bắt đầu ở đây để học, tham khảo docs khi cần chi tiết.
 
-**How long does it take to go through everything?**
-11-13 hours for the full path. But you'll get immediate value in 15 minutes — just copy a slash command template and try it.
+**Mất bao lâu để học hết?**
+11-13 giờ cho lộ trình đầy đủ. Nhưng bạn sẽ có giá trị ngay trong 15 phút — chỉ cần copy một template slash command và thử.
 
-**Can I use this with Claude Sonnet / Haiku / Opus?**
-Yes. All templates work with Claude Sonnet 4.6, Claude Opus 4.7, and Claude Haiku 4.5.
+**Có dùng được với Claude Sonnet / Haiku / Opus không?**
+Có. Tất cả template hoạt động với Claude Sonnet 4.6, Claude Opus 4.7 và Claude Haiku 4.5.
 
-**Can I contribute?**
-Absolutely. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. We welcome new examples, bug fixes, documentation improvements, and community templates.
+**Tôi có thể đóng góp không?**
+Tất nhiên. Xem [CONTRIBUTING.md](CONTRIBUTING.md) để biết hướng dẫn. Chúng tôi hoan nghênh ví dụ mới, sửa lỗi, cải thiện tài liệu và template cộng đồng.
 
-**Can I read this offline?**
-Yes. Run `uv run scripts/build_epub.py` to generate an EPUB ebook with all content and rendered diagrams.
+**Có đọc offline được không?**
+Có. Chạy `uv run scripts/build_epub.py` để tạo ebook EPUB với toàn bộ nội dung và sơ đồ đã render.
 
 ---
 
-## Start Mastering Claude Code Today
+## Bắt đầu thành thạo Claude Code ngay hôm nay
 
-You already have Claude Code installed. The only thing between you and 10x productivity is knowing how to use it. This guide gives you the structured path, the visual explanations, and the copy-paste templates to get there.
+Bạn đã cài Claude Code. Điều duy nhất giữa bạn và năng suất gấp 10 lần là biết cách sử dụng nó. Hướng dẫn này cho bạn lộ trình có cấu trúc, giải thích trực quan và template sẵn sàng copy-paste để đạt được điều đó.
 
-MIT licensed. Free forever. Clone it, fork it, make it yours.
+Giấy phép MIT. Miễn phí mãi mãi. Clone, fork, biến nó thành của bạn.
 
-**[Start the Learning Path ->](LEARNING-ROADMAP.md)** | **[Browse the Feature Catalog](CATALOG.md)** | **[Get Started in 15 Minutes](#get-started-in-15-minutes)**
+**[Bắt đầu lộ trình học ->](LEARNING-ROADMAP.md)** | **[Duyệt danh mục tính năng](CATALOG.md)** | **[Bắt đầu trong 15 phút](#bắt-đầu-trong-15-phút)**
 
 ---
 
 <details>
-<summary>Quick Navigation — All Features</summary>
+<summary>Điều hướng nhanh — Tất cả tính năng</summary>
 
-| Feature | Description | Folder |
+| Tính năng | Mô tả | Thư mục |
 |---------|-------------|--------|
-| **Feature Catalog** | Complete reference with installation commands | [CATALOG.md](CATALOG.md) |
-| **Slash Commands** | User-invoked shortcuts | [01-slash-commands/](01-slash-commands/) |
-| **Memory** | Persistent context | [02-memory/](02-memory/) |
-| **Skills** | Reusable capabilities | [03-skills/](03-skills/) |
-| **Subagents** | Specialized AI assistants | [04-subagents/](04-subagents/) |
-| **MCP Protocol** | External tool access | [05-mcp/](05-mcp/) |
-| **Hooks** | Event-driven automation | [06-hooks/](06-hooks/) |
-| **Plugins** | Bundled features | [07-plugins/](07-plugins/) |
-| **Checkpoints** | Session snapshots & rewind | [08-checkpoints/](08-checkpoints/) |
-| **Advanced Features** | Planning, thinking, background tasks | [09-advanced-features/](09-advanced-features/) |
-| **CLI Reference** | Commands, flags, and options | [10-cli/](10-cli/) |
-| **Blog Posts** | Real-world usage examples | [Blog Posts](https://medium.com/@luongnv89) |
+| **Danh mục tính năng** | Tham khảo đầy đủ với lệnh cài đặt | [CATALOG.md](CATALOG.md) |
+| **Slash Command** | Phím tắt do người dùng gọi | [01-slash-commands/](01-slash-commands/) |
+| **Memory** | Ngữ cảnh lưu trữ lâu dài | [02-memory/](02-memory/) |
+| **Skill** | Khả năng tái sử dụng | [03-skills/](03-skills/) |
+| **Subagent** | Trợ lý AI chuyên biệt | [04-subagents/](04-subagents/) |
+| **MCP Protocol** | Truy cập công cụ bên ngoài | [05-mcp/](05-mcp/) |
+| **Hook** | Tự động hóa theo sự kiện | [06-hooks/](06-hooks/) |
+| **Plugin** | Gói tính năng | [07-plugins/](07-plugins/) |
+| **Checkpoint** | Snapshot phiên & tua lại | [08-checkpoints/](08-checkpoints/) |
+| **Tính năng nâng cao** | Planning, thinking, background task | [09-advanced-features/](09-advanced-features/) |
+| **CLI Reference** | Lệnh, cờ và tùy chọn | [10-cli/](10-cli/) |
+| **Bài viết blog** | Ví dụ sử dụng thực tế | [Bài viết blog](https://medium.com/@luongnv89) |
 
 </details>
 
 <details>
-<summary>Feature Comparison</summary>
+<summary>So sánh tính năng</summary>
 
-| Feature | Invocation | Persistence | Best For |
+| Tính năng | Cách gọi | Lưu trữ | Phù hợp nhất cho |
 |---------|-----------|------------|----------|
-| **Slash Commands** | Manual (`/cmd`) | Session only | Quick shortcuts |
-| **Memory** | Auto-loaded | Cross-session | Long-term learning |
-| **Skills** | Auto-invoked | Filesystem | Automated workflows |
-| **Subagents** | Auto-delegated | Isolated context | Task distribution |
-| **MCP Protocol** | Auto-queried | Real-time | Live data access |
-| **Hooks** | Event-triggered | Configured | Automation & validation |
-| **Plugins** | One command | All features | Complete solutions |
-| **Checkpoints** | Manual/Auto | Session-based | Safe experimentation |
-| **Planning Mode** | Manual/Auto | Plan phase | Complex implementations |
-| **Background Tasks** | Manual | Task duration | Long-running operations |
-| **CLI Reference** | Terminal commands | Session/Script | Automation & scripting |
+| **Slash Command** | Thủ công (`/cmd`) | Chỉ trong phiên | Phím tắt nhanh |
+| **Memory** | Tự động tải | Xuyên phiên | Học dài hạn |
+| **Skill** | Tự động gọi | Hệ thống file | Workflow tự động |
+| **Subagent** | Tự động phân công | Ngữ cảnh cô lập | Phân phối tác vụ |
+| **MCP Protocol** | Tự động truy vấn | Thời gian thực | Truy cập dữ liệu trực tiếp |
+| **Hook** | Kích hoạt theo sự kiện | Đã cấu hình | Tự động hóa & xác thực |
+| **Plugin** | Một lệnh | Tất cả tính năng | Giải pháp hoàn chỉnh |
+| **Checkpoint** | Thủ công/Tự động | Theo phiên | Thử nghiệm an toàn |
+| **Planning Mode** | Thủ công/Tự động | Giai đoạn lập kế hoạch | Triển khai phức tạp |
+| **Background Task** | Thủ công | Thời gian tác vụ | Thao tác chạy lâu |
+| **CLI Reference** | Lệnh terminal | Phiên/Script | Tự động hóa & scripting |
 
 </details>
 
 <details>
-<summary>Installation Quick Reference</summary>
+<summary>Tham khảo cài đặt nhanh</summary>
 
 ```bash
-# Slash Commands
+# Slash Command
 cp 01-slash-commands/*.md .claude/commands/
 
 # Memory
 cp 02-memory/project-CLAUDE.md ./CLAUDE.md
 
-# Skills
+# Skill
 cp -r 03-skills/code-review ~/.claude/skills/
 
-# Subagents
+# Subagent
 cp 04-subagents/*.md .claude/agents/
 
 # MCP
 export GITHUB_TOKEN="token"
 claude mcp add github -- npx -y @modelcontextprotocol/server-github
 
-# Hooks
+# Hook
 mkdir -p ~/.claude/hooks
 cp 06-hooks/*.sh ~/.claude/hooks/
 chmod +x ~/.claude/hooks/*.sh
 
-# Plugins
+# Plugin
 /plugin install pr-review
 
-# Checkpoints (auto-enabled, configure in settings)
-# See 08-checkpoints/README.md
+# Checkpoint (tự động bật, cấu hình trong settings)
+# Xem 08-checkpoints/README.md
 
-# Advanced Features (configure in settings)
-# See 09-advanced-features/config-examples.json
+# Tính năng nâng cao (cấu hình trong settings)
+# Xem 09-advanced-features/config-examples.json
 
-# CLI Reference (no installation needed)
-# See 10-cli/README.md for usage examples
+# CLI Reference (không cần cài đặt)
+# Xem 10-cli/README.md để biết ví dụ sử dụng
 ```
 
 </details>
 
 <details>
-<summary>01. Slash Commands</summary>
+<summary>01. Slash Command</summary>
 
-**Location**: [01-slash-commands/](01-slash-commands/)
+**Vị trí**: [01-slash-commands/](01-slash-commands/)
 
-**What**: User-invoked shortcuts stored as Markdown files
+**Là gì**: Phím tắt do người dùng gọi, lưu dưới dạng file Markdown
 
-**Examples**:
-- `optimize.md` - Code optimization analysis
-- `pr.md` - Pull request preparation
-- `generate-api-docs.md` - API documentation generator
+**Ví dụ**:
+- `optimize.md` - Phân tích tối ưu code
+- `pr.md` - Chuẩn bị pull request
+- `generate-api-docs.md` - Tạo tài liệu API
 
-**Installation**:
+**Cài đặt**:
 ```bash
 cp 01-slash-commands/*.md /path/to/project/.claude/commands/
 ```
 
-**Usage**:
+**Sử dụng**:
 ```
 /optimize
 /pr
 /generate-api-docs
 ```
 
-**Learn More**: [Discovering Claude Code Slash Commands](https://medium.com/@luongnv89/discovering-claude-code-slash-commands-cdc17f0dfb29)
+**Tìm hiểu thêm**: [Khám phá Claude Code Slash Commands](https://medium.com/@luongnv89/discovering-claude-code-slash-commands-cdc17f0dfb29)
 
 </details>
 
 <details>
 <summary>02. Memory</summary>
 
-**Location**: [02-memory/](02-memory/)
+**Vị trí**: [02-memory/](02-memory/)
 
-**What**: Persistent context across sessions
+**Là gì**: Ngữ cảnh lưu trữ lâu dài xuyên phiên
 
-**Examples**:
-- `project-CLAUDE.md` - Team-wide project standards
-- `directory-api-CLAUDE.md` - Directory-specific rules
-- `personal-CLAUDE.md` - Personal preferences
+**Ví dụ**:
+- `project-CLAUDE.md` - Tiêu chuẩn dự án toàn team
+- `directory-api-CLAUDE.md` - Quy tắc theo thư mục
+- `personal-CLAUDE.md` - Tùy chọn cá nhân
 
-**Installation**:
+**Cài đặt**:
 ```bash
 # Project memory
 cp 02-memory/project-CLAUDE.md /path/to/project/CLAUDE.md
@@ -361,110 +361,110 @@ cp 02-memory/directory-api-CLAUDE.md /path/to/project/src/api/CLAUDE.md
 cp 02-memory/personal-CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
-**Usage**: Automatically loaded by Claude
+**Sử dụng**: Tự động được Claude tải
 
 </details>
 
 <details>
-<summary>03. Skills</summary>
+<summary>03. Skill</summary>
 
-**Location**: [03-skills/](03-skills/)
+**Vị trí**: [03-skills/](03-skills/)
 
-**What**: Reusable, auto-invoked capabilities with instructions and scripts
+**Là gì**: Khả năng tái sử dụng, tự động gọi với hướng dẫn và script
 
-**Examples**:
-- `code-review/` - Comprehensive code review with scripts
-- `brand-voice/` - Brand voice consistency checker
-- `doc-generator/` - API documentation generator
+**Ví dụ**:
+- `code-review/` - Review code toàn diện với script
+- `brand-voice/` - Kiểm tra nhất quán giọng văn thương hiệu
+- `doc-generator/` - Tạo tài liệu API
 
-**Installation**:
+**Cài đặt**:
 ```bash
-# Personal skills
+# Skill cá nhân
 cp -r 03-skills/code-review ~/.claude/skills/
 
-# Project skills
+# Skill dự án
 cp -r 03-skills/code-review /path/to/project/.claude/skills/
 ```
 
-**Usage**: Automatically invoked when relevant
+**Sử dụng**: Tự động gọi khi liên quan
 
 </details>
 
 <details>
-<summary>04. Subagents</summary>
+<summary>04. Subagent</summary>
 
-**Location**: [04-subagents/](04-subagents/)
+**Vị trí**: [04-subagents/](04-subagents/)
 
-**What**: Specialized AI assistants with isolated contexts and custom prompts
+**Là gì**: Trợ lý AI chuyên biệt với ngữ cảnh cô lập và prompt tùy chỉnh
 
-**Examples**:
-- `code-reviewer.md` - Comprehensive code quality analysis
-- `test-engineer.md` - Test strategy and coverage
-- `documentation-writer.md` - Technical documentation
-- `secure-reviewer.md` - Security-focused review (read-only)
-- `implementation-agent.md` - Full feature implementation
+**Ví dụ**:
+- `code-reviewer.md` - Phân tích chất lượng code toàn diện
+- `test-engineer.md` - Chiến lược test và coverage
+- `documentation-writer.md` - Tài liệu kỹ thuật
+- `secure-reviewer.md` - Review bảo mật (chỉ đọc)
+- `implementation-agent.md` - Triển khai tính năng đầy đủ
 
-**Installation**:
+**Cài đặt**:
 ```bash
 cp 04-subagents/*.md /path/to/project/.claude/agents/
 ```
 
-**Usage**: Automatically delegated by main agent
+**Sử dụng**: Tự động được agent chính phân công
 
 </details>
 
 <details>
 <summary>05. MCP Protocol</summary>
 
-**Location**: [05-mcp/](05-mcp/)
+**Vị trí**: [05-mcp/](05-mcp/)
 
-**What**: Model Context Protocol for accessing external tools and APIs
+**Là gì**: Model Context Protocol để truy cập công cụ và API bên ngoài
 
-**Examples**:
-- `github-mcp.json` - GitHub integration
-- `database-mcp.json` - Database queries
-- `filesystem-mcp.json` - File operations
-- `multi-mcp.json` - Multiple MCP servers
+**Ví dụ**:
+- `github-mcp.json` - Tích hợp GitHub
+- `database-mcp.json` - Truy vấn cơ sở dữ liệu
+- `filesystem-mcp.json` - Thao tác file
+- `multi-mcp.json` - Nhiều MCP server
 
-**Installation**:
+**Cài đặt**:
 ```bash
-# Set environment variables
+# Đặt biến môi trường
 export GITHUB_TOKEN="your_token"
 export DATABASE_URL="postgresql://..."
 
-# Add MCP server via CLI
+# Thêm MCP server qua CLI
 claude mcp add github -- npx -y @modelcontextprotocol/server-github
 
-# Or add to project .mcp.json manually (see 05-mcp/ for examples)
+# Hoặc thêm vào .mcp.json của dự án (xem 05-mcp/ để biết ví dụ)
 ```
 
-**Usage**: MCP tools are automatically available to Claude once configured
+**Sử dụng**: Công cụ MCP tự động khả dụng cho Claude khi đã cấu hình
 
 </details>
 
 <details>
-<summary>06. Hooks</summary>
+<summary>06. Hook</summary>
 
-**Location**: [06-hooks/](06-hooks/)
+**Vị trí**: [06-hooks/](06-hooks/)
 
-**What**: Event-driven shell commands that execute automatically in response to Claude Code events
+**Là gì**: Lệnh shell theo sự kiện, tự động thực thi khi có sự kiện Claude Code
 
-**Examples**:
-- `format-code.sh` - Auto-format code before writing
-- `pre-commit.sh` - Run tests before commits
-- `security-scan.sh` - Scan for security issues
-- `log-bash.sh` - Log all bash commands
-- `validate-prompt.sh` - Validate user prompts
-- `notify-team.sh` - Send notifications on events
+**Ví dụ**:
+- `format-code.sh` - Tự động format code trước khi ghi
+- `pre-commit.sh` - Chạy test trước khi commit
+- `security-scan.sh` - Quét vấn đề bảo mật
+- `log-bash.sh` - Ghi log tất cả lệnh bash
+- `validate-prompt.sh` - Xác thực prompt người dùng
+- `notify-team.sh` - Gửi thông báo khi có sự kiện
 
-**Installation**:
+**Cài đặt**:
 ```bash
 mkdir -p ~/.claude/hooks
 cp 06-hooks/*.sh ~/.claude/hooks/
 chmod +x ~/.claude/hooks/*.sh
 ```
 
-Configure hooks in `~/.claude/settings.json`:
+Cấu hình hook trong `~/.claude/settings.json`:
 ```json
 {
   "hooks": {
@@ -480,177 +480,177 @@ Configure hooks in `~/.claude/settings.json`:
 }
 ```
 
-**Usage**: Hooks execute automatically on events
+**Sử dụng**: Hook tự động thực thi khi có sự kiện
 
-**Hook Types** (4 types, 25 events):
-- **Tool Hooks**: `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PermissionRequest`
-- **Session Hooks**: `SessionStart`, `SessionEnd`, `Stop`, `StopFailure`, `SubagentStart`, `SubagentStop`
-- **Task Hooks**: `UserPromptSubmit`, `TaskCompleted`, `TaskCreated`, `TeammateIdle`
-- **Lifecycle Hooks**: `ConfigChange`, `CwdChanged`, `FileChanged`, `PreCompact`, `PostCompact`, `WorktreeCreate`, `WorktreeRemove`, `Notification`, `InstructionsLoaded`, `Elicitation`, `ElicitationResult`
+**Loại Hook** (4 loại, 25 sự kiện):
+- **Hook công cụ**: `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PermissionRequest`
+- **Hook phiên**: `SessionStart`, `SessionEnd`, `Stop`, `StopFailure`, `SubagentStart`, `SubagentStop`
+- **Hook tác vụ**: `UserPromptSubmit`, `TaskCompleted`, `TaskCreated`, `TeammateIdle`
+- **Hook vòng đời**: `ConfigChange`, `CwdChanged`, `FileChanged`, `PreCompact`, `PostCompact`, `WorktreeCreate`, `WorktreeRemove`, `Notification`, `InstructionsLoaded`, `Elicitation`, `ElicitationResult`
 
 </details>
 
 <details>
-<summary>07. Plugins</summary>
+<summary>07. Plugin</summary>
 
-**Location**: [07-plugins/](07-plugins/)
+**Vị trí**: [07-plugins/](07-plugins/)
 
-**What**: Bundled collections of commands, agents, MCP, and hooks
+**Là gì**: Gói tập hợp command, agent, MCP và hook
 
-**Examples**:
-- `pr-review/` - Complete PR review workflow
-- `devops-automation/` - Deployment and monitoring
-- `documentation/` - Documentation generation
+**Ví dụ**:
+- `pr-review/` - Workflow review PR hoàn chỉnh
+- `devops-automation/` - Deployment và monitoring
+- `documentation/` - Tạo tài liệu
 
-**Installation**:
+**Cài đặt**:
 ```bash
 /plugin install pr-review
 /plugin install devops-automation
 /plugin install documentation
 ```
 
-**Usage**: Use bundled slash commands and features
+**Sử dụng**: Dùng slash command và tính năng đi kèm
 
 </details>
 
 <details>
-<summary>08. Checkpoints and Rewind</summary>
+<summary>08. Checkpoint và Tua lại</summary>
 
-**Location**: [08-checkpoints/](08-checkpoints/)
+**Vị trí**: [08-checkpoints/](08-checkpoints/)
 
-**What**: Save conversation state and rewind to previous points to explore different approaches
+**Là gì**: Lưu trạng thái hội thoại và tua lại điểm trước để khám phá cách tiếp cận khác
 
-**Key Concepts**:
-- **Checkpoint**: Snapshot of conversation state
-- **Rewind**: Return to previous checkpoint
-- **Branch Point**: Explore multiple approaches from same checkpoint
+**Khái niệm chính**:
+- **Checkpoint**: Ảnh chụp trạng thái hội thoại
+- **Tua lại**: Quay về checkpoint trước
+- **Điểm rẽ nhánh**: Khám phá nhiều cách tiếp cận từ cùng checkpoint
 
-**Usage**:
+**Sử dụng**:
 ```
-# Checkpoints are created automatically with every user prompt
-# To rewind, press Esc twice or use:
+# Checkpoint được tạo tự động với mỗi prompt người dùng
+# Để tua lại, nhấn Esc hai lần hoặc dùng:
 /rewind
 
-# Then choose from five options:
-# 1. Restore code and conversation
-# 2. Restore conversation
-# 3. Restore code
-# 4. Summarize from here
-# 5. Never mind
+# Sau đó chọn từ năm tùy chọn:
+# 1. Khôi phục code và hội thoại
+# 2. Khôi phục hội thoại
+# 3. Khôi phục code
+# 4. Tóm tắt từ đây
+# 5. Thôi không cần
 ```
 
-**Use Cases**:
-- Try different implementation approaches
-- Recover from mistakes
-- Safe experimentation
-- Compare alternative solutions
-- A/B testing different designs
+**Trường hợp sử dụng**:
+- Thử các cách triển khai khác nhau
+- Khôi phục từ sai lầm
+- Thử nghiệm an toàn
+- So sánh giải pháp thay thế
+- A/B test các thiết kế khác nhau
 
 </details>
 
 <details>
-<summary>09. Advanced Features</summary>
+<summary>09. Tính năng nâng cao</summary>
 
-**Location**: [09-advanced-features/](09-advanced-features/)
+**Vị trí**: [09-advanced-features/](09-advanced-features/)
 
-**What**: Advanced capabilities for complex workflows and automation
+**Là gì**: Khả năng nâng cao cho workflow và tự động hóa phức tạp
 
-**Includes**:
-- **Planning Mode** — Create detailed implementation plans before coding
-- **Extended Thinking** — Deep reasoning for complex problems (toggle with `Alt+T` / `Option+T`)
-- **Background Tasks** — Run long operations without blocking
-- **Permission Modes** — `default`, `acceptEdits`, `plan`, `dontAsk`, `bypassPermissions`
-- **Headless Mode** — Run Claude Code in CI/CD: `claude -p "Run tests and generate report"`
-- **Session Management** — `/resume`, `/rename`, `/fork`, `claude -c`, `claude -r`
-- **Configuration** — Customize behavior in `~/.claude/settings.json`
+**Bao gồm**:
+- **Planning Mode** — Tạo kế hoạch triển khai chi tiết trước khi code
+- **Extended Thinking** — Suy luận sâu cho vấn đề phức tạp (bật/tắt với `Alt+T` / `Option+T`)
+- **Background Task** — Chạy thao tác dài mà không chặn
+- **Permission Mode** — `default`, `acceptEdits`, `plan`, `dontAsk`, `bypassPermissions`
+- **Headless Mode** — Chạy Claude Code trong CI/CD: `claude -p "Run tests and generate report"`
+- **Quản lý phiên** — `/resume`, `/rename`, `/fork`, `claude -c`, `claude -r`
+- **Cấu hình** — Tùy chỉnh hành vi trong `~/.claude/settings.json`
 
-See [config-examples.json](09-advanced-features/config-examples.json) for complete configurations.
+Xem [config-examples.json](09-advanced-features/config-examples.json) để biết cấu hình đầy đủ.
 
 </details>
 
 <details>
 <summary>10. CLI Reference</summary>
 
-**Location**: [10-cli/](10-cli/)
+**Vị trí**: [10-cli/](10-cli/)
 
-**What**: Complete command-line interface reference for Claude Code
+**Là gì**: Tham khảo giao diện dòng lệnh đầy đủ cho Claude Code
 
-**Quick Examples**:
+**Ví dụ nhanh**:
 ```bash
-# Interactive mode
+# Chế độ tương tác
 claude "explain this project"
 
-# Print mode (non-interactive)
+# Chế độ in (không tương tác)
 claude -p "review this code"
 
-# Process file content
+# Xử lý nội dung file
 cat error.log | claude -p "explain this error"
 
-# JSON output for scripts
+# Xuất JSON cho script
 claude -p --output-format json "list functions"
 
-# Resume session
+# Tiếp tục phiên
 claude -r "feature-auth" "continue implementation"
 ```
 
-**Use Cases**: CI/CD pipeline integration, script automation, batch processing, multi-session workflows, custom agent configurations
+**Trường hợp sử dụng**: Tích hợp CI/CD pipeline, tự động hóa script, xử lý hàng loạt, workflow nhiều phiên, cấu hình agent tùy chỉnh
 
 </details>
 
 <details>
-<summary>Example Workflows</summary>
+<summary>Workflow ví dụ</summary>
 
-### Complete Code Review Workflow
+### Workflow review code hoàn chỉnh
 
 ```markdown
-# Uses: Slash Commands + Subagents + Memory + MCP
+# Sử dụng: Slash Command + Subagent + Memory + MCP
 
 User: /review-pr
 
 Claude:
-1. Loads project memory (coding standards)
-2. Fetches PR via GitHub MCP
-3. Delegates to code-reviewer subagent
-4. Delegates to test-engineer subagent
-5. Synthesizes findings
-6. Provides comprehensive review
+1. Tải project memory (tiêu chuẩn coding)
+2. Lấy PR qua GitHub MCP
+3. Phân công cho subagent code-reviewer
+4. Phân công cho subagent test-engineer
+5. Tổng hợp phát hiện
+6. Cung cấp review toàn diện
 ```
 
-### Automated Documentation
+### Tạo tài liệu tự động
 
 ```markdown
-# Uses: Skills + Subagents + Memory
+# Sử dụng: Skill + Subagent + Memory
 
-User: "Generate API documentation for the auth module"
+User: "Tạo tài liệu API cho module auth"
 
 Claude:
-1. Loads project memory (doc standards)
-2. Detects doc generation request
-3. Auto-invokes doc-generator skill
-4. Delegates to api-documenter subagent
-5. Creates comprehensive docs with examples
+1. Tải project memory (tiêu chuẩn tài liệu)
+2. Phát hiện yêu cầu tạo tài liệu
+3. Tự động gọi skill doc-generator
+4. Phân công cho subagent api-documenter
+5. Tạo tài liệu toàn diện với ví dụ
 ```
 
-### DevOps Deployment
+### Triển khai DevOps
 
 ```markdown
-# Uses: Plugins + MCP + Hooks
+# Sử dụng: Plugin + MCP + Hook
 
 User: /deploy production
 
 Claude:
-1. Runs pre-deploy hook (validates environment)
-2. Delegates to deployment-specialist subagent
-3. Executes deployment via Kubernetes MCP
-4. Monitors progress
-5. Runs post-deploy hook (health checks)
-6. Reports status
+1. Chạy hook pre-deploy (xác thực môi trường)
+2. Phân công cho subagent deployment-specialist
+3. Thực thi deployment qua Kubernetes MCP
+4. Giám sát tiến trình
+5. Chạy hook post-deploy (kiểm tra sức khỏe)
+6. Báo cáo trạng thái
 ```
 
 </details>
 
 <details>
-<summary>Directory Structure</summary>
+<summary>Cấu trúc thư mục</summary>
 
 ```
 ├── 01-slash-commands/
@@ -710,171 +710,171 @@ Claude:
 │   └── README.md
 ├── 10-cli/
 │   └── README.md
-└── README.md (this file)
+└── README.md (file này)
 ```
 
 </details>
 
 <details>
-<summary>Best Practices</summary>
+<summary>Thực hành tốt nhất</summary>
 
-### Do's
-- Start simple with slash commands
-- Add features incrementally
-- Use memory for team standards
-- Test configurations locally first
-- Document custom implementations
-- Version control project configurations
-- Share plugins with team
+### Nên làm
+- Bắt đầu đơn giản với slash command
+- Thêm tính năng từ từ
+- Dùng memory cho tiêu chuẩn team
+- Test cấu hình ở local trước
+- Ghi tài liệu cho triển khai tùy chỉnh
+- Quản lý phiên bản cấu hình dự án
+- Chia sẻ plugin với team
 
-### Don'ts
-- Don't create redundant features
-- Don't hardcode credentials
-- Don't skip documentation
-- Don't over-complicate simple tasks
-- Don't ignore security best practices
-- Don't commit sensitive data
-
-</details>
-
-<details>
-<summary>Troubleshooting</summary>
-
-### Feature Not Loading
-1. Check file location and naming
-2. Verify YAML frontmatter syntax
-3. Check file permissions
-4. Review Claude Code version compatibility
-
-### MCP Connection Failed
-1. Verify environment variables
-2. Check MCP server installation
-3. Test credentials
-4. Review network connectivity
-
-### Subagent Not Delegating
-1. Check tool permissions
-2. Verify agent description clarity
-3. Review task complexity
-4. Test agent independently
+### Không nên
+- Không tạo tính năng trùng lặp
+- Không hardcode thông tin xác thực
+- Không bỏ qua tài liệu
+- Không làm phức tạp hóa tác vụ đơn giản
+- Không bỏ qua thực hành bảo mật tốt nhất
+- Không commit dữ liệu nhạy cảm
 
 </details>
 
 <details>
-<summary>Testing</summary>
+<summary>Xử lý sự cố</summary>
 
-This project includes comprehensive automated testing:
+### Tính năng không tải
+1. Kiểm tra vị trí và tên file
+2. Xác minh cú pháp YAML frontmatter
+3. Kiểm tra quyền file
+4. Kiểm tra tương thích phiên bản Claude Code
 
-- **Unit Tests**: Python tests using pytest (Python 3.10, 3.11, 3.12)
-- **Code Quality**: Linting and formatting with Ruff
-- **Security**: Vulnerability scanning with Bandit
-- **Type Checking**: Static type analysis with mypy
-- **Build Verification**: EPUB generation testing
-- **Coverage Tracking**: Codecov integration
+### Kết nối MCP thất bại
+1. Xác minh biến môi trường
+2. Kiểm tra cài đặt MCP server
+3. Test thông tin xác thực
+4. Kiểm tra kết nối mạng
+
+### Subagent không phân công
+1. Kiểm tra quyền công cụ
+2. Xác minh mô tả agent rõ ràng
+3. Kiểm tra độ phức tạp tác vụ
+4. Test agent độc lập
+
+</details>
+
+<details>
+<summary>Kiểm thử</summary>
+
+Dự án này bao gồm kiểm thử tự động toàn diện:
+
+- **Unit Test**: Test Python dùng pytest (Python 3.10, 3.11, 3.12)
+- **Chất lượng code**: Linting và formatting với Ruff
+- **Bảo mật**: Quét lỗ hổng với Bandit
+- **Kiểm tra kiểu**: Phân tích kiểu tĩnh với mypy
+- **Xác minh build**: Test tạo EPUB
+- **Theo dõi coverage**: Tích hợp Codecov
 
 ```bash
-# Install development dependencies
+# Cài dependency phát triển
 uv pip install -r requirements-dev.txt
 
-# Run all unit tests
+# Chạy tất cả unit test
 pytest scripts/tests/ -v
 
-# Run tests with coverage report
+# Chạy test với báo cáo coverage
 pytest scripts/tests/ -v --cov=scripts --cov-report=html
 
-# Run code quality checks
+# Kiểm tra chất lượng code
 ruff check scripts/
 ruff format --check scripts/
 
-# Run security scan
+# Quét bảo mật
 bandit -c pyproject.toml -r scripts/ --exclude scripts/tests/
 
-# Run type checking
+# Kiểm tra kiểu
 mypy scripts/ --ignore-missing-imports
 ```
 
-Tests run automatically on every push to `main`/`develop` and every PR to `main`. See [TESTING.md](.github/TESTING.md) for detailed information.
+Test chạy tự động mỗi khi push lên `main`/`develop` và mỗi PR vào `main`. Xem [TESTING.md](.github/TESTING.md) để biết thông tin chi tiết.
 
 </details>
 
 <details>
-<summary>EPUB Generation</summary>
+<summary>Tạo EPUB</summary>
 
-Want to read this guide offline? Generate an EPUB ebook:
+Muốn đọc hướng dẫn này offline? Tạo ebook EPUB:
 
 ```bash
 uv run scripts/build_epub.py
 ```
 
-This creates `claude-howto-guide.epub` with all content, including rendered Mermaid diagrams.
+Lệnh này tạo `claude-howto-guide.epub` với toàn bộ nội dung, bao gồm sơ đồ Mermaid đã render.
 
-See [scripts/README.md](scripts/README.md) for more options.
-
-</details>
-
-<details>
-<summary>Contributing</summary>
-
-Found an issue or want to contribute an example? We'd love your help!
-
-**Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on:**
-- Types of contributions (examples, docs, features, bugs, feedback)
-- How to set up your development environment
-- Directory structure and how to add content
-- Writing guidelines and best practices
-- Commit and PR process
-
-**Our Community Standards:**
-- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - How we treat each other
-- [SECURITY.md](SECURITY.md) - Security policy and vulnerability reporting
-
-### Reporting Security Issues
-
-If you discover a security vulnerability, please report it responsibly:
-
-1. **Use GitHub Private Vulnerability Reporting**: https://github.com/luongnv89/claude-howto/security/advisories
-2. **Or read** [.github/SECURITY_REPORTING.md](.github/SECURITY_REPORTING.md) for detailed instructions
-3. **Do NOT** open a public issue for security vulnerabilities
-
-Quick start:
-1. Fork and clone the repository
-2. Create a descriptive branch (`add/feature-name`, `fix/bug`, `docs/improvement`)
-3. Make your changes following the guidelines
-4. Submit a pull request with a clear description
-
-**Need help?** Open an issue or discussion, and we'll guide you through the process.
+Xem [scripts/README.md](scripts/README.md) để biết thêm tùy chọn.
 
 </details>
 
 <details>
-<summary>Additional Resources</summary>
+<summary>Đóng góp</summary>
 
-- [Claude Code Documentation](https://code.claude.com/docs/en/overview)
+Phát hiện vấn đề hoặc muốn đóng góp ví dụ? Chúng tôi rất mong sự giúp đỡ của bạn!
+
+**Vui lòng đọc [CONTRIBUTING.md](CONTRIBUTING.md) để biết hướng dẫn chi tiết về:**
+- Các loại đóng góp (ví dụ, tài liệu, tính năng, lỗi, phản hồi)
+- Cách thiết lập môi trường phát triển
+- Cấu trúc thư mục và cách thêm nội dung
+- Hướng dẫn viết và thực hành tốt nhất
+- Quy trình commit và PR
+
+**Tiêu chuẩn cộng đồng:**
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - Cách chúng ta đối xử với nhau
+- [SECURITY.md](SECURITY.md) - Chính sách bảo mật và báo cáo lỗ hổng
+
+### Báo cáo vấn đề bảo mật
+
+Nếu bạn phát hiện lỗ hổng bảo mật, vui lòng báo cáo có trách nhiệm:
+
+1. **Dùng GitHub Private Vulnerability Reporting**: https://github.com/luongnv89/claude-howto/security/advisories
+2. **Hoặc đọc** [.github/SECURITY_REPORTING.md](.github/SECURITY_REPORTING.md) để biết hướng dẫn chi tiết
+3. **KHÔNG** mở issue công khai cho lỗ hổng bảo mật
+
+Bắt đầu nhanh:
+1. Fork và clone repository
+2. Tạo nhánh mô tả rõ (`add/feature-name`, `fix/bug`, `docs/improvement`)
+3. Thực hiện thay đổi theo hướng dẫn
+4. Gửi pull request với mô tả rõ ràng
+
+**Cần giúp đỡ?** Mở issue hoặc discussion, chúng tôi sẽ hướng dẫn bạn qua quy trình.
+
+</details>
+
+<details>
+<summary>Tài liệu bổ sung</summary>
+
+- [Tài liệu Claude Code](https://code.claude.com/docs/en/overview)
 - [MCP Protocol Specification](https://modelcontextprotocol.io)
-- [Skills Repository](https://github.com/luongnv89/skills) - Collection of ready-to-use skills
+- [Kho Skill](https://github.com/luongnv89/skills) - Bộ sưu tập skill sẵn sàng sử dụng
 - [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook)
-- [Boris Cherny's Claude Code Workflow](https://x.com/bcherny/status/2007179832300581177) - The creator of Claude Code shares his systematized workflow: parallel agents, shared CLAUDE.md, Plan mode, slash commands, subagents, and verification hooks for autonomous long-running sessions.
+- [Workflow Claude Code của Boris Cherny](https://x.com/bcherny/status/2007179832300581177) - Người tạo Claude Code chia sẻ workflow hệ thống: parallel agent, shared CLAUDE.md, Plan mode, slash command, subagent và verification hook cho phiên tự động chạy lâu.
 
 </details>
 
 ---
 
-## Contributing
+## Đóng góp
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on how to get started.
-
----
-
-## License
-
-MIT License - see [LICENSE](LICENSE). Free to use, modify, and distribute. The only requirement is including the license notice.
+Chúng tôi hoan nghênh đóng góp! Vui lòng xem [Hướng dẫn đóng góp](CONTRIBUTING.md) để biết cách bắt đầu.
 
 ---
 
-**Last Updated**: April 16, 2026
-**Claude Code Version**: 2.1.112
-**Sources**:
+## Giấy phép
+
+Giấy phép MIT - xem [LICENSE](LICENSE). Miễn phí sử dụng, chỉnh sửa và phân phối. Yêu cầu duy nhất là giữ lại thông báo giấy phép.
+
+---
+
+**Cập nhật lần cuối**: 17 tháng 4, 2026
+**Phiên bản Claude Code**: 2.1.112
+**Nguồn**:
 - https://docs.anthropic.com/en/docs/claude-code
 - https://www.anthropic.com/news/claude-opus-4-7
 - https://support.claude.com/en/articles/12138966-release-notes
-**Compatible Models**: Claude Sonnet 4.6, Claude Opus 4.7, Claude Haiku 4.5
+**Model tương thích**: Claude Sonnet 4.6, Claude Opus 4.7, Claude Haiku 4.5
