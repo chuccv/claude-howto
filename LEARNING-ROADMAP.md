@@ -738,7 +738,13 @@ Once you've completed all milestones:
 
 ---
 
-**Last Updated**: March 2026
+**Last Updated**: April 16, 2026
+**Claude Code Version**: 2.1.112
+**Sources**:
+- https://docs.anthropic.com/en/docs/claude-code
+- https://www.anthropic.com/news/claude-opus-4-7
+- https://support.claude.com/en/articles/12138966-release-notes
+**Compatible Models**: Claude Sonnet 4.6, Claude Opus 4.7, Claude Haiku 4.5
 **Maintained by**: Claude How-To Contributors
 **License**: Educational purposes, free to use and adapt
 

@@ -105,8 +105,9 @@ my-plugin/
 ├── hooks/                # Event handlers in hooks.json
 │   └── hooks.json
 ├── .mcp.json             # MCP server configurations
-├── .lsp.json             # LSP server configurations
-├── settings.json         # Default settings
+├── .lsp.json             # LSP server configurations for code intelligence
+├── bin/                  # Executables added to Bash tool's PATH while plugin is enabled
+├── settings.json         # Default settings applied when plugin is enabled (currently only `agent` key supported)
 ├── templates/
 │   └── issue-template.md
 ├── scripts/
@@ -249,6 +250,29 @@ Plugins have access to a persistent state directory via the `${CLAUDE_PLUGIN_DAT
 ```
 
 The directory is created automatically when the plugin is installed. Files stored here persist until the plugin is uninstalled.
+
+### Background Monitors (v2.1.105)
+
+Plugins can register background monitors that auto-arm when a session starts or when the plugin's skill is invoked. Add a top-level `monitors` key to your plugin manifest:
+
+```json
+{
+  "name": "my-plugin",
+  "version": "1.0.0",
+  "monitors": [
+    {
+      "command": "tail -f /var/log/app.log",
+      "trigger": "session_start"
+    }
+  ]
+}
+```
+
+The `trigger` field accepts:
+- `"session_start"` — arm the monitor automatically when a session begins
+- `"skill_invoke"` — arm the monitor when the plugin's skill is invoked
+
+Monitors use the same Monitor tool under the hood, streaming stdout lines as events Claude can react to.
 
 ## Inline Plugin via Settings (`source: 'settings'`) (v2.1.80+)
 
@@ -533,7 +557,7 @@ GitHub and git sources support optional `ref` (branch/tag) and `sha` (commit has
 
 **Private repositories**: Supported via git credential helpers or environment tokens. Users must have read access to the repository.
 
-**Official marketplace submission**: Submit plugins to the Anthropic-curated marketplace for broader distribution.
+**Official marketplace submission**: Submit plugins to the Anthropic-curated marketplace for broader distribution via [claude.ai/settings/plugins/submit](https://claude.ai/settings/plugins/submit) or [platform.claude.com/plugins/submit](https://platform.claude.com/plugins/submit).
 
 ### Strict mode
 
@@ -941,3 +965,13 @@ The following Claude Code features work together with plugins:
 - [MCP Server Reference](https://modelcontextprotocol.io/)
 - [Subagent Configuration Guide](../04-subagents/README.md)
 - [Hook System Reference](../06-hooks/README.md)
+
+---
+
+**Last Updated**: April 16, 2026
+**Claude Code Version**: 2.1.112
+**Sources**:
+- https://docs.anthropic.com/en/docs/claude-code/plugins
+- https://www.anthropic.com/news/claude-opus-4-7
+- https://support.claude.com/en/articles/12138966-release-notes
+**Compatible Models**: Claude Sonnet 4.6, Claude Opus 4.7, Claude Haiku 4.5

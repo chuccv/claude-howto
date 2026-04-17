@@ -598,8 +598,8 @@ Lesson READMEs end with a metadata block:
 ```markdown
 ---
 **Last Updated**: March 2026
-**Claude Code Version**: 2.1+
-**Compatible Models**: Claude Sonnet 4.6, Claude Opus 4.6, Claude Haiku 4.5
+**Claude Code Version**: 2.1.97
+**Compatible Models**: Claude Sonnet 4.6, Claude Opus 4.7, Claude Haiku 4.5
 ```
 
 - Use month + year format (e.g., "March 2026")
@@ -628,3 +628,13 @@ Before submitting content, verify:
 - [ ] Paragraphs are short and focused
 - [ ] Related guides section links to relevant lessons
 - [ ] Commit message follows conventional commits format
+
+---
+
+**Last Updated**: April 16, 2026
+**Claude Code Version**: 2.1.112
+**Sources**:
+- https://docs.anthropic.com/en/docs/claude-code
+- https://www.anthropic.com/news/claude-opus-4-7
+- https://support.claude.com/en/articles/12138966-release-notes
+**Compatible Models**: Claude Sonnet 4.6, Claude Opus 4.7, Claude Haiku 4.5

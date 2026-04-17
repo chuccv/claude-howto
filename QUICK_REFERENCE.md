@@ -389,9 +389,8 @@ cp -r 03-skills/code-review ~/.claude/skills/
 | **Auto Mode** | Fully autonomous operation with background classifier | `--enable-auto-mode` flag, `Shift+Tab` to cycle modes |
 | **Channels** | Discord and Telegram integration | `--channels` flag, Discord/Telegram bots |
 | **Voice Dictation** | Speak commands and context to Claude | `/voice` command |
-| **Hooks (25 events)** | Expanded hook system with 4 types | command, http, prompt, agent hook types |
+| **Hooks (26 events)** | Expanded hook system with 4 types | command, http, prompt, agent hook types |
 | **MCP Elicitation** | MCP servers can request user input at runtime | Auto-prompted when server needs clarification |
-| **WebSocket MCP** | WebSocket transport for MCP connections | Configure in `.mcp.json` with `ws://` URLs |
 | **Plugin LSP** | Language Server Protocol support for plugins | `userConfig`, `${CLAUDE_PLUGIN_DATA}` variable |
 | **Remote Control** | Control Claude Code via WebSocket API | `claude --remote` for external integrations |
 | **Web Sessions** | Browser-based Claude Code interface | `claude web` to launch |
@@ -399,7 +398,7 @@ cp -r 03-skills/code-review ~/.claude/skills/
 | **Task List** | Manage background tasks | `/task list`, `/task status <id>` |
 | **Auto Memory** | Automatic memory saving from conversations | Claude auto-saves key context to CLAUDE.md |
 | **Git Worktrees** | Isolated workspaces for parallel development | `/worktree` to create isolated workspace |
-| **Model Selection** | Switch between Sonnet 4.6 and Opus 4.6 | `/model` or `--model` flag |
+| **Model Selection** | Switch between Sonnet 4.6, Opus 4.7, and Haiku 4.5 | `/model` or `--model` flag |
 | **Agent Teams** | Coordinate multiple agents on tasks | Enable with `CLAUDE_AGENT_TEAMS=1` env var |
 | **Scheduled Tasks** | Recurring tasks with `/loop` | `/loop 5m /command` or CronCreate tool |
 | **Chrome Integration** | Browser automation | `--chrome` flag or `/chrome` command |
@@ -444,8 +443,8 @@ echo $GITHUB_TOKEN
 | Team standards | Memory | `02-memory/project-CLAUDE.md` |
 | Auto workflow | Skill | `03-skills/code-review/` |
 | Specialized task | Subagent | `04-subagents/code-reviewer.md` |
-| External data | MCP (+ Elicitation, WebSocket) | `05-mcp/github-mcp.json` |
-| Event automation | Hook (25 events, 4 types) | `06-hooks/pre-commit.sh` |
+| External data | MCP (+ Elicitation) | `05-mcp/github-mcp.json` |
+| Event automation | Hook (26 events, 4 types) | `06-hooks/pre-commit.sh` |
 | Complete solution | Plugin (+ LSP support) | `07-plugins/pr-review/` |
 | Safe experiment | Checkpoint | `08-checkpoints/checkpoint-examples.md` |
 | Fully autonomous | Auto Mode | `--enable-auto-mode` or `Shift+Tab` |
@@ -504,3 +503,12 @@ Getting started checklist:
 **Full Index**: `cat INDEX.md`
 
 **This Card**: Keep it handy for quick reference!
+
+---
+**Last Updated**: April 16, 2026
+**Claude Code Version**: 2.1.112
+**Sources**:
+- https://docs.anthropic.com/en/docs/claude-code
+- https://www.anthropic.com/news/claude-opus-4-7
+- https://support.claude.com/en/articles/12138966-release-notes
+**Compatible Models**: Claude Sonnet 4.6, Claude Opus 4.7, Claude Haiku 4.5
